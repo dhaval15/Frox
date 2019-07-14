@@ -486,6 +486,12 @@ theme.start_background = ""
 theme.start_tile_background = colors.background
 theme.start_text = colors.text
 
+theme.folder_color = colors.red_dark
+theme.folder_hover = colors.red_light
+
+theme.url_color = colors.blue_dark
+theme.url_hover = colors.blue_light
+
 -- Bar Color Scheme
 
 theme.battery_bar_color = colors.pink_darker
@@ -494,6 +500,12 @@ theme.volume_bar_color_muted = colors.blue_dark .. "50"
 theme.ram_bar_color = colors.purple_dark
 theme.cpu_bar_color = colors.green_dark
 theme.temperature_bar_color = colors.pink_dark
+
+-- Dmenu
+
+theme.dmenu_background = colors.background
+theme.dmenu_text = colors.teal_light
+
 
 
 return theme

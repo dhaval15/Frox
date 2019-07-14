@@ -23,7 +23,7 @@ run mpd ~/.config/mpd/mpd.conf
 #xrdb ~/.Xresources
 
 # Urxvt daemon
-#run urxvtd -q -o -f
+# run urxvtd -q -o -f
 
 # Mpv input file
 if [ ! -e /tmp/mpv.fifo ]; then

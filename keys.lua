@@ -423,16 +423,16 @@ keys.globalkeys = gears.table.join(
     --awful.key({ superkey },            "d",     function () awful.screen.focused().mypromptbox:run() end,
               --{description = "run prompt", group = "launcher"}),
     -- Run program (d for dmenu ;)
-    awful.key({ superkey }, "d",
+    awful.key({ superkey, "Shift"   }, "d",
       function ()
         awful.spawn(string.format("rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto Sans Ragular 10'",
         beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
 	end,
       {description = "rofi launcher", group = "launcher"}),
 
-    awful.key({ superkey, "Shift"   }, "d",
+    awful.key({ superkey }, "d",
     function ()
-        awful.spawn(string.format("dmenu_run -i -nb '#191919' -nf '#24c87b' -sb '#24c87b' -sf '#191919' -fn NotoMonoRegular:bold:pixelsize=14",
+        awful.spawn(string.format("dmenu_run -i -nb '".. beautiful.dmenu_background .."' -nf '".. beautiful.dmenu_text .."' -sb '".. beautiful.dmenu_text .."' -sf '".. beautiful.dmenu_background .."' -fn NotoMonoRegular:bold:pixelsize=14",
         beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
 	end,
     {description = "show dmenu", group = "hotkeys"}),

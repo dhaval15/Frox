@@ -267,8 +267,8 @@ local date_box = create_boxed_widget(date, dpi(150), dpi(150), beautiful.xbackgr
 
 -- File system bookmarks
 local function create_bookmark(name, path)
-    local original_color = beautiful.xcolor1
-    local hover_color = beautiful.xcolor9
+    local original_color = beautiful.folder_color
+    local hover_color = beautiful.folder_hover
 
     local bookmark = wibox.widget.textbox()
     bookmark.font = "sans bold 16"
@@ -319,8 +319,8 @@ local bookmarks_box = create_boxed_widget(bookmarks, dpi(200), dpi(300), beautif
 
 -- URLs
 local function create_url(name, path)
-    local original_color = beautiful.xcolor4
-    local hover_color = beautiful.xcolor12
+    local original_color = beautiful.url_color
+    local hover_color = beautiful.url_hover
 
     local url = wibox.widget.textbox()
     url.font = "sans bold 16"
@@ -332,7 +332,7 @@ local function create_url(name, path)
     url:buttons(
       gears.table.join(
         awful.button({ }, 1, function ()
-            awful.spawn(browser.." "..path)
+            awful.spawn("opera "..path)
             start_screen_hide()
         end),
         awful.button({ }, 3, function ()
@@ -355,11 +355,11 @@ local function create_url(name, path)
 end
 
 local urls = wibox.widget {
-    create_url("4CHAN", "4chan.org"),
+    create_url("YOUTUBE", "youtube.com"),
     pad(1),
     create_url("REDDIT", "reddit.com"),
     pad(1),
-    create_url("GITHUB", "github.com/elenapan"),
+    create_url("GITHUB", "github.com/dhavalpatel007"),
     layout = wibox.layout.fixed.vertical
 }
 
