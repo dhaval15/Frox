@@ -430,13 +430,13 @@ brightness_box:buttons(
     end),
     -- Scroll up - Increase brightness
     awful.button({ }, 4, function ()
-        awful.spawn.easy_async_with_shell("xbacklight -inc 10", function()
+        awful.spawn.easy_async_with_shell("xbacklight -dec 10", function()
             awesome.emit_signal("brightness_changed")
         end)
     end),
     -- Scroll down - Decrease brightness
     awful.button({ }, 5, function ()
-        awful.spawn.easy_async_with_shell("xbacklight -dec 10", function()
+        awful.spawn.easy_async_with_shell("xbacklight -inc 10", function()
             awesome.emit_signal("brightness_changed")
         end)
     end)

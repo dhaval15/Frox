@@ -18,12 +18,12 @@ local brightness_bar = wibox.widget{
     bottom = dpi(8),
   },
   forced_width  = dpi(200),
-  shape         = gears.shape.rounded_bar,
-  bar_shape     = gears.shape.rounded_bar,
-  color         = active_color,
-  background_color = background_color,
-  border_width  = 0,
-  border_color  = beautiful.border_color,
+  --shape         = gears.shape.rounded_bar,
+  --bar_shape     = gears.shape.rounded_bar,
+  color         = beautiful.brightness_bar_color,
+  background_color = "#00000000",
+  border_width  = 1,
+  border_color  = beautiful.brightness_bar_color,
   widget        = wibox.widget.progressbar,
 }
 

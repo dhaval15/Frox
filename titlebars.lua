@@ -117,7 +117,7 @@ client.connect_signal("request::titlebars", function(c)
     local title_widget
     if beautiful.titlebar_title_enabled then
         title_widget = awful.titlebar.widget.titlewidget(c)
-        title_widget.font = beautiful.titlebar_font
+        title_widget.fg = beautiful.titlebar_font
         title_widget:set_align(beautiful.titlebar_title_align)
     else
         title_widget = wibox.widget.textbox("")
@@ -176,9 +176,9 @@ client.connect_signal("request::titlebars", function(c)
                     -- In the presence of buttons, use padding to center the title if needed.
                     --pad(10),
                     -- Clickable buttons
-                    --awful.titlebar.widget.closebutton    (c),
-                    --awful.titlebar.widget.maximizedbutton(c),
-                    --awful.titlebar.widget.minimizebutton   (c),
+                    -- awful.titlebar.widget.closebutton    (c),
+                    -- awful.titlebar.widget.maximizedbutton(c),
+                    -- awful.titlebar.widget.minimizebutton   (c),
                     -- awful.titlebar.widget.ontopbutton    (c),
                     -- awful.titlebar.widget.stickybutton   (c),
                     -- awful.titlebar.widget.floatingbutton (c),
@@ -201,10 +201,10 @@ client.connect_signal("request::titlebars", function(c)
                     --awful.titlebar.widget.floatingbutton (c),
                     --awful.titlebar.widget.stickybutton   (c),
                     --awful.titlebar.widget.ontopbutton    (c),
-                    -- awful.titlebar.widget.minimizebutton(c),
-                    -- awful.titlebar.widget.maximizedbutton(c),
-                    -- awful.titlebar.widget.closebutton    (c),
-                    --buttons = buttons,
+                    awful.titlebar.widget.minimizebutton(c),
+                    awful.titlebar.widget.maximizedbutton(c),
+                    awful.titlebar.widget.closebutton    (c),
+                    -- buttons = buttons,
                     -- In the presence of buttons, use padding to center the title if needed.
                     -- pad(1),
                     layout = titlebar_item_layout

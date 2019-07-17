@@ -92,15 +92,15 @@ theme.screen_margin = dpi(3)
 
 -- Borders
 theme.border_width  = dpi(1)
-theme.border_color = colors.luminent1
-theme.border_normal = colors.luminent1
-theme.border_focus  = colors.luminent1
+theme.border_color = colors.green_dark
+theme.border_normal = colors.green_dark
+theme.border_focus  = colors.green_dark
 theme.border_radius = dpi(0)
 
 -- Titlebars
 -- (Titlebar items can be customized in titlebars.lua)
 theme.titlebars_enabled = false
-theme.titlebar_size = dpi(10)
+theme.titlebar_size = dpi(16)
 theme.titlebar_title_enabled = true
 theme.titlebar_font = colors.background
 -- Window title alignment: left, right, center
@@ -109,11 +109,11 @@ theme.titlebar_title_align = "center"
 theme.titlebar_position = "top"
 -- Use 4 titlebars around the window to imitate borders
 theme.titlebars_imitate_borders = false
-theme.titlebar_bg = colors.luminent1
+theme.titlebar_bg = colors.green_dark
 -- theme.titlebar_bg_focus = theme.xcolor5
 -- theme.titlebar_bg_normal = theme.xcolor13
-theme.titlebar_fg_focus = theme.xcolor7
-theme.titlebar_fg_normal = theme.xcolor15
+theme.titlebar_fg_focus = colors.background
+theme.titlebar_fg_normal = colors.background
 --theme.titlebar_fg = theme.xcolor7
 
 -- Notifications
@@ -165,7 +165,7 @@ theme.separator_text = "|"
 --theme.separator_text = " :: "
 --theme.separator_text = " • "
 -- theme.separator_text = " •• "
-theme.separator_fg = theme.xcolor8
+theme.separator_fg = colors.red_dark .. "50"
 
 -- Wibar(s)
 -- (Bar items can be customized in bars.lua)
@@ -500,6 +500,7 @@ theme.volume_bar_color_muted = colors.blue_dark .. "50"
 theme.ram_bar_color = colors.purple_dark
 theme.cpu_bar_color = colors.green_dark
 theme.temperature_bar_color = colors.pink_dark
+theme.brightness_bar_color = colors.yellow_light
 
 -- Dmenu
 

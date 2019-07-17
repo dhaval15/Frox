@@ -387,10 +387,10 @@ volume:buttons(gears.table.join(
                  end),
                  -- Scroll - Increase / Decrease volume
                  awful.button({ }, 4, function () 
-                     awful.spawn.with_shell("amixer set Master 10%+")
+                     awful.spawn.with_shell("amixer set Master 10%-")
                  end),
                  awful.button({ }, 5, function () 
-                     awful.spawn.with_shell("amixer set Master 10%-")
+                     awful.spawn.with_shell("amixer set Master 10%+")
                  end)
 ))
 
