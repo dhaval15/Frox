@@ -1,0 +1,35 @@
+! --- Terminal fonts ---
+XTerm*faceName: Monaco:size=11:antialias=true
+XTerm*renderFont: true
+XTerm*scaleHeight: 1
+Xft.rgba: rgb
+XTerm*selectToClipboard: false
+xterm*internalBorder: 28
+
+
+XTerm*vt100.translations: #override \
+    Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
+    Shift Ctrl <Key> V: insert-selection(CLIPBOARD)
+
+
+!Theme Four
+ xterm*background: rgb:12/12/28
+ xterm*foreground: rgb:59/ff/b1
+ xterm.cursorColor:rgb:59/ff/b1
+ xterm*color0:     rgb:12/12/28
+ xterm*color1:     rgb:ea/54/55
+ xterm*color2:     rgb:28/c7/6f
+ xterm*color3:     rgb:fd/eb/71
+ xterm*color4:     rgb:ce/9f/fc
+ xterm*color5:     rgb:f7/61/a1
+ xterm*color6:     rgb:ab/dc/ff
+ xterm*color7:     rgb:59/ff/b1
+ xterm*color8:     rgb:36/36/50
+ xterm*color9:     rgb:fe/b6/92
+ xterm*color10:    rgb:81/fb/b8
+ xterm*color11:    rgb:f8/d8/00
+ xterm*color12:    rgb:73/67/f0
+ xterm*color13:    rgb:8c/1b/ab
+ xterm*color14:    rgb:03/96/ff
+ xterm*color15:    rgb:ff/ff/ff
+
