@@ -76,7 +76,7 @@ theme.bg_normal     = theme.xbackground
 theme.bg_focus      = theme.xbackground
 theme.bg_urgent     = theme.xbackground
 theme.bg_minimize   = theme.xcolor8
-theme.bg_systray    = theme.xbackground
+theme.bg_systray    = colors.background
 
 theme.fg_normal     = "#dddddd" --theme.xcolor7
 theme.fg_focus      = focused_color
@@ -92,9 +92,9 @@ theme.screen_margin = dpi(3)
 
 -- Borders
 theme.border_width  = dpi(1)
-theme.border_color = colors.green_dark
-theme.border_normal = colors.green_dark
-theme.border_focus  = colors.green_dark
+theme.border_color = colors.green_dark .. "50"
+theme.border_normal = colors.green_dark .. "50"
+theme.border_focus  = colors.red_dark
 theme.border_radius = dpi(0)
 
 -- Titlebars

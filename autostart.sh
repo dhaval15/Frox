@@ -40,8 +40,8 @@ run numlockx
 # run battery_daemon
 
 # Network manager tray icon
-run nm-applet
 run blueman-applet
+run nm-applet
 run nitrogen --restore
 # run xfsettingsd
 # Keyboard layout

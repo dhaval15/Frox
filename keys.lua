@@ -68,8 +68,8 @@ keys.desktopbuttons = gears.table.join(
 
 -- {{{ Key bindings
 keys.globalkeys = gears.table.join(
-    -- awful.key({ superkey          }, "s",      hotkeys_popup.show_help,
-    --         {description="show help", group="awesome"}),
+    awful.key({ superkey          }, "a",      hotkeys_popup.show_help,
+             {description="show help", group="awesome"}),
     --awful.key({ superkey,           }, "comma",   awful.tag.viewprev,
               --{description = "view previous", group = "tag"}),
     --awful.key({ superkey,           }, "period",  awful.tag.viewnext,
@@ -243,7 +243,7 @@ keys.globalkeys = gears.table.join(
         end,
         {description = "go back", group = "tag"}),
     -- Standard program
-    awful.key({ superkey,           }, "Return", function () awful.spawn("gnome-terminal") end,
+    awful.key({ superkey,           }, "Return", function () awful.spawn("xterm") end,
               {description = "open a terminal", group = "launcher"}),
     -- Spawn floating terminal
     awful.key({ superkey, shiftkey }, "Return", function()

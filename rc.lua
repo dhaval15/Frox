@@ -125,7 +125,7 @@ screen_height = awful.screen.focused().geometry.height
 awful.layout.layouts = {
     -- I only ever use these 3
     awful.layout.suit.tile,
-    -- awful.layout.suit.floating,
+    --awful.layout.suit.floating,
     awful.layout.suit.max,
     --awful.layout.suit.spiral,
     --awful.layout.suit.spiral.dwindle,

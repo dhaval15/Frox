@@ -24,11 +24,6 @@ start_widget:buttons(gears.table.join(
                          -- Middle click - Toggle scratchpad
                          awful.button({ }, 2, function ()
                              helpers.toggle_scratchpad()
-                         end),
-                         -- Right click - Toggle tray
-                         awful.button({ }, 3, function ()
-                             local traybox = awful.screen.focused().traybox
-                             traybox.visible = not traybox.visible
                          end)
 ))
 
@@ -238,6 +233,7 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Create a system tray widget
     s.systray = wibox.widget.systray()
+    s.systray.opacity = 1
 
     -- Wibar detached - Method: Transparent useless bar
     -- Requires compositor
@@ -247,7 +243,7 @@ awful.screen.connect_for_each_screen(function(s)
         --s.useless_wibar:buttons(keys.desktopbuttons)
     end
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = beautiful.wibar_position, screen = s, width = beautiful.wibar_width, height = beautiful.wibar_height, shape = helpers.rrect(beautiful.wibar_border_radius)})
+    s.mywibox = awful.wibar({ visible = true,position = beautiful.wibar_position, screen = s, width = beautiful.wibar_width, height = beautiful.wibar_height, shape = helpers.rrect(beautiful.wibar_border_radius)})
     -- Wibar items
     -- Add or remove widgets here
     s.mywibox:setup {
@@ -284,8 +280,8 @@ awful.screen.connect_for_each_screen(function(s)
             --minimal_tasklist,
             -- textseparator,
             --date_prefix,
-            -- mytextdate,
-            -- textseparator,
+            --mytextdate,
+            --textseparator,
             --clock_prefix,
             -- mytextclock,
             -- textseparator,
@@ -304,13 +300,13 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Create a wibox that will only show the tray
     -- Hidden by default. Can be toggled with a keybind.
-    s.traybox = wibox({visible = false, ontop = true, shape = helpers.rbar(), type = "dock"})
+    s.traybox = wibox({visible = true, ontop = false, type = "dock"})
     s.traybox.width = dpi(150)
-    s.traybox.height = dpi(38)
-    s.traybox.x = beautiful.screen_margin * 2
-    -- s.traybox.x = s.geometry.width - s.traybox.width - beautiful.screen_margin * 2
+    s.traybox.height = dpi(28)
+    -- s.traybox.x = beautiful.screen_margin * 2
+    s.traybox.x = s.geometry.width - s.traybox.width - beautiful.screen_margin * 2
     s.traybox.y = s.geometry.height - s.traybox.height - beautiful.screen_margin * 2
-    s.traybox.bg = beautiful.bg_systray
+    s.traybox.bg = "#00000000"
     s.traybox:setup {
       -- wibox.widget.textbox("test"),
       pad,
@@ -321,7 +317,7 @@ awful.screen.connect_for_each_screen(function(s)
     s.traybox:buttons(gears.table.join(
                         -- Middle click - Hide traybox
                         awful.button({ }, 2, function ()
-                            s.traybox.visible = false
+                            --s.traybox.visible = false
                         end)
     ))
 
